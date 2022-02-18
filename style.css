@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Raleway:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap');
+
+:root{
+    --font-title : "Lobster";
+    --font-text : "Raleway";
+    --color-arrow:rgb(10,10,35);
+}
+
+*{
+  
+    margin:0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+}
+
+body{
+ 
+    background-color: whitesmoke;
+}
+
+.menu{
+    background-color: rgb(10,10,35);
+    color:white;
+    padding: 20px;
+    
+
+}
+.menu h1{
+    font-family: var(--font-title);  
+    letter-spacing: 2px;
+}
+
+.content{
+    background-image: url("https://i.ibb.co/MR72Msm/Steve-Jobs.jpg");
+    background-attachment: fixed;
+    width: 100%;
+    
+ 
+}
+
+
+.arrow{
+    margin: 10px 0px 20px 0px;
+    width: 8px;
+    height: 40px;
+    background-color: var(--color-arrow);
+    position: relative;
+
+}
+
+.arrow::after{
+content: "";
+position: absolute;
+bottom: -25px;
+left: -11px;
+border-bottom: 15px solid transparent;
+border-top: 15px solid var(--color-arrow);
+border-left: 15px solid transparent;
+border-right: 15px solid transparent;
+}
+
+.card{
+    transition: 2s ease all;
+    border-style: dashed;
+    
+    border-width: 2px;
+    border-color:rgb(10,10,35);
+    padding: 20px;
+   opacity: 0;
+}
+
+.card.active{
+    background-color: white;
+    opacity: 1;
+}
+.year{
+    font-family: var(--font-title);
+    color:rgb(10,10,35);
+    font-size: 20px;
+ 
+}
+
+.description{
+    max-width: 450px;
+    text-align: justify;
+}
+#main{
+   
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+background-color: rgba(255,255,255,0.89);
+width: 100%;
+
+
+}
+
+#tribute-info{
+    display: flex;
+flex-direction: column;
+align-items: center;
+
+height: 100%;
+
+
+    
+}
+#title{
+    font-family: var(--font-title);
+}
+#img-div{
+    padding: 30px;
+}
+#image{
+    max-width: 750px;
+    max-height: 750px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+#img-caption{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+#tribute-content{
+
+    border-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 28px;
+    position: relative;
+    opacity: 1;
+    padding: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  opacity: 0.99;
+    background-color: transparent;
+    
+   
+}
+
+#iphone{
+   
+    
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+     top:0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+   
+  
+}
+
+#tribute-link{
+    margin: 30px;
+    font-weight: bold;
+    color:rgb(10,10,35);
+    font-size: 20px;
+}
+
+
+@media screen and (max-width:680px) {
+    #tribute-content{
+        opacity: 1;
+       
+    }
+
+    #image{
+        height: 100%;
+    }
+
+}
+
+
+    
+
+
